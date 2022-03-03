@@ -7,7 +7,7 @@ A website where a user can login and add his contacts by entering the following 
 ## Virtual Environment setup
 
 **<ins>Ubuntu</ins>**
-
+Install virtualenv **cmd: sudo apt install python3-virtualenv**
 create virtual environment  **cmd: virtualenv env**
 
 activate virtual environemt **cmd: source env/bin/activate**
