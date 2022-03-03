@@ -1,0 +1,10 @@
+<nav class="navbar">
+    <ul class="nav-ul">
+        <li class="nav-li"><a class="nav-a" href="{% url 'index' %}">Contacts App</a></li>
+        
+        {% if user.is_authenticated %}
+            <li class="nav-li" style="float:right"><a class="nav-a" href="{% url 'logout' %}">Logout</a><li>
+            <li class="nav-li" style="float:right"><a class="nav-a" id="active"> {{ request.user }}</a></li>
+        {% endif %}
+    </ul>
+</nav>
