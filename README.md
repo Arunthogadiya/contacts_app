@@ -6,7 +6,8 @@ A website where a user can login and add his contacts by entering the following 
 -----
 ## Virtual Environment setup
 
-**ubuntu**
+**<ins>Ubuntu</ins>**
+
 create virtual environment  **cmd: virtualenv env**
 
 activate virtual environemt **cmd: source env/bin/activate**
