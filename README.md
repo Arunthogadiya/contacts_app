@@ -4,6 +4,13 @@ A website where a user can login and add his contacts by entering the following 
 * Contact Number
 * Contact Email
 -----
+## Virtual Environment setup
+
+**ubuntu**
+create virtual environment  cmd: virtualenv env
+activate virtual environemt cmd: source env/bin/activate
+
+## Database
 Create a file db.sqlite3 in the parent directory
 
 ## Django setup
