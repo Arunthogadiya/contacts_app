@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Sign Up
+{% endblock %}
+
+{% block content %}
+	
+	{% if messages %}
+
+	    {% for message in messages %}
+
+		<div class="card">
+		    <div class="card-header">
+		        <p class="card-title">{{ message }}</p>
+		    </div>
+		</div>
+	    
+	    {% endfor %}
+
+	{% endif %}
+
+	<div class="reg-container">
+		<form class="reg-form" method="post">
+			<h1 class="reg-head">Sign up</h1>
+			{% csrf_token %}
+			<p>Already have an account?
+				<a href="{% url 'login' %}">Sign in</a>
+			</p>
+
+			{% for field in form %}
+				<p class='logs-label'>{{ field.label_tag }}</p>
+	        	<p>{{ field }}</p>
+		    {% endfor %}
+
+		    <!-- Sign up button -->
+			<button class="log-btn" type="submit">Sign up</button>
+
+		    <!-- Terms of service -->
+		    <p class="reg-terms">
+				By clicking the "Sign Up" button, you are creating an account,
+				and you agree to the Terms of Use.
+		    </p>
+		</form>
+	</div>
+
+	<div class="col-md-2"></div>
+
+</div>
+</div>
+
+{% endblock %}
