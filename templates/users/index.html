@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Home
+{% endblock %}
+
+{% block content %}
+
+	{{ block.super }}
+	<h1>Contact Form and Contact List Page</h1>
+	<div class="contact-container">
+		<form class="contact-form" method="post">
+			{% csrf_token %}
+		    <p class="contact-form-head">Add Contacts</p>
+
+			{% for field in form %}
+	    		{{ field.label_tag }}
+				{{ field }}
+				{% for error in field.errors %}
+		    	    <p style="color: red">{{ error }}</p>
+		    	{% endfor %}
+		    {% endfor %}
+
+		    <!-- Sign up button -->
+		    <button class="contact-form-btn" type="submit">Save</button>
+	</div>
+
+		<p class="contact-form-head">My Contacts</p>
+		<table class="uploads-data-table" id="contacts">
+			<thead>
+			<tr>
+			  <th>Name</th>
+			  <th>Phone No</th>
+			  <th>Email</th>
+			</tr>
+			</thead>
+			<tbody>
+			  {% for contact in contact_list %}
+				<tr class="data-details" >
+				  <td>{{ contact.name }}</td>
+				  <td>{{ contact.phone_no }}</td>
+				  <td>{{ contact.email }}</td>
+				</tr>
+			  {% endfor %}
+			</tbody>
+		  </table>
+
+{% endblock content %}
