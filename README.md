@@ -1,4 +1,4 @@
-# contacts_app
+# Contacts App
 A website where a user can login and add his contacts by entering the following fields.
 * Contact Name
 * Contact Number
